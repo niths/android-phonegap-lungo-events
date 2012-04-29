@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>NITHs whats up</title>
+        <meta name="description" content="">
+        <meta name="author" content="niths">
+        <!-- Mobile viewport optimization http://goo.gl/b9SaQ -->
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta http-equiv="cleartype" content="on">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <!-- For iPhone 4 with high-resolution Retina display: -->
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/images/icon@2x.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/images/icon-72.png">
+        <link rel="apple-touch-icon-precomposed" href="assets/images/icon.png">
+        <link rel="apple-touch-startup-image" href="assets/images/default.png">
+        <!-- Sugar Growl -->
+        <link rel="stylesheet" href="./lungo.js/lungo.sugar.growl.css">
+        <!-- PullDown CSS  -->
+        <link rel="stylesheet" href="./lungo.js/lungo.pulldown.css">
+        <!-- Main Stylesheet -->
+        <link rel="stylesheet" href="./lungo.js/lungo-1.2.css">
+        <link rel="stylesheet" href="./lungo.js/lungo.theme.default.css">
+        <link rel="stylesheet" href="./lungo.js/app.css">
+        
+    </head>
+
+    <body class="app">
+
+        <section id="events">
+            <header>
+            <nav>
+            	<input type="search" id="text_search_input" placeholder="Søk" class="text"/>
+				<a href="#events_index_container" id="search_button" data-target="article" data-icon="search" class="button onright current"></a>
+			</nav>
+            </header>
+            
+            
+            <footer>
+            <div id="scroll-horizontal" class="scroll-demo scrollable horizontal">
+	                <div style="width: 1050px;" id="tagsdiv">
+					<span><a href="#events_index_container" id="utvalg_button" data-target="article" class="button blue">utvalg</a></span>
+					<span><a href="#events_index_container" id="kroa_button" data-target="article" class="button yellow">kroa</a></span>
+					<span><a href="#events_index_container" id="karr_button" data-target="article" class="button arcticblue">karrieretorsdag</a></span>
+					<span><a href="#events_index_container" id="fadderuka_button" data-target="article" class="button green">fadderuka12</a></span>
+					<span><a href="#events_index_container" id="bed_button" data-target="article" class="button pink">bedriftsbesøk</a></span>
+					<span><a href="#events_index_container" id="bed4_button" data-target="article" class="button magenta">idrettsutvalget</a></span>
+					<span><a href="#events_index_container" id="bed3_button" data-target="article" class="button lightgreen">battlestation</a></span>
+					<span><a href="#events_index_container" id="bed2_button" data-target="article" class="button red">sosialutvalget</a></span>
+					<span><a href="#events_index_container" id="bed6_button" data-target="article" class="button twitter">bibliotek</a></span>
+					<span><a href="#events_index_container" id="bed5_button" data-target="article" class="button orange">fotoutvalget</a></span>
+					<span><a href="#events_index_container" id="bed7_button" data-target="article" class="button facebook">LAN</a></span>
+	                </div>
+            	</div>
+            </footer>
+            
+            <article id="events_index_container" class="list indented scrollable"> 	
+            </article>
+            
+            <article id="events_single_container" class="list indented scrollable">
+            </article>
+
+        </section>
+
+        <!-- LungoJS (Developer mode) -->
+        <script src="lungo.js/lib/QuoJS.js"></script>
+        <script src="lungo.js/lib/iscroll-lite.js"></script>
+        <script src="lungo.js/lungo-1.2-unpacked.js"></script>
+        <!-- Sugar Growl(Developer mode) -->
+        <script src="./lungo.js/lungo.sugar.growl.js"></script>
+        <!-- LungoJS - Sandbox App -->
+        <script charset="utf-8" src="app/app.js"></script>
+        <script charset="utf-8" src="app/data.js"></script>
+        <script charset="utf-8" src="app/events.js"></script>
+        <script charset="utf-8" src="app/services.js"></script>
+        <script charset="utf-8" src="app/view.js"></script>
+        
+    	<script type="text/javascript" charset="utf-8">
+    	LUNGO.dom(document).ready(function(){
+            App.Services.getAllEvents('');
+        });
+
+		</script>
+    </body>
+</html>
